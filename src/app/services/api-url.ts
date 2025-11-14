@@ -6,3 +6,5 @@ import { Injectable } from '@angular/core';
 export class ApiUrl {
   url:string = "https://andre-karyoti.com/prognostik-wp";
 }
+
+// something new

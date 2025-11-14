@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Project files
-src/api-url.ts
+./src/app/services/api-url.ts
