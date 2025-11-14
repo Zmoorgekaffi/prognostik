@@ -1,0 +1,25 @@
+header {
+  background-image: linear-gradient(320deg, #ffbb9b99, white 72%),
+    linear-gradient(180deg, white, white);
+  transition: transform 0.24s ease-in-out;
+
+  &.show {
+    transform:translateY(0)
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+}
+
+nav .nav-container {
+  transition: grid-template-rows 0.3s ease-in-out;
+
+  &.close {
+    grid-template-rows: minmax(0, 0fr);
+  }
+
+  &.open {
+    grid-template-rows: minmax(0, 1fr);
+  }
+}

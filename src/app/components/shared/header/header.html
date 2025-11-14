@@ -1,0 +1,34 @@
+<header
+  class="z-[999] top-0 fixed flex justify-start items-center w-full bg-blue-50 px-site-padding-x flex-col"
+  [ngClass]="{ show: show, hide: !show }"
+>
+  <div class="flex justify-between items-center w-full py-2">
+    <!-- logo -->
+    <a href="#" class="w-[12rem] h-[3.4rem]">
+      <img class="w-full h-full object-contain" src="/logo/logo.webp" alt="" />
+    </a>
+    <!-- menu icon -->
+    <div (click)="toggleNav()" class="flex gap-1 h-8 cursor-pointer justify-center items-center">
+      <div class="rounded-full h-2 w-2 bg-grey-light"></div>
+      <div class="rounded-full h-2 w-2 bg-grey-light"></div>
+      <div class="rounded-full h-2 w-2 bg-grey-light"></div>
+    </div>
+  </div>
+  <!-- nav -->
+  <nav class="w-full overflow-hidden">
+    <div class="grid nav-container" [ngClass]="state">
+      <div
+        class="grid grid-cols-2 w-full border-t-[1px] border-grey-light pb-4 pt-4 text-grey-light"
+      >
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+        <a href="#">über mich</a>
+      </div>
+    </div>
+  </nav>
+</header>

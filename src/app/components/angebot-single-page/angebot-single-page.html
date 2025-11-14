@@ -1,0 +1,60 @@
+<app-section>
+  <!-- hero -->
+  <div class="relative">
+    <div class="rounded-16 overflow-hidden h-[20rem] 560:h-[31rem] mt-8">
+      @if(angebotObject()) {
+      <img
+        [src]="angebotObject()['photo_gallery']['angebot_foto'][0][0]['full_image_url']"
+        alt=""
+        class="w-full h-full object-cover"
+      />
+      }
+    </div>
+    <!-- overlay -->
+    <div
+      class="p-4 text-center absolute top-0 bottom-0 left-0 right-0 bg-[#ffffff4d] flex flex-col justify-center items-center gap-4 text-grey-light-rgba-095"
+    >
+      @if(angebotObject()){
+      <span
+        class="text-font-48 leading-line-48 480:text-font-32 480:leading-line-32 560:text-font-48 560:leading-line-48"
+        [innerHTML]="angebotObject()['angebot_titel']"
+      ></span>
+      <span
+        class="text-font-24 leading-line-24 560:text-font-32 560:leading-line-32"
+        [innerHTML]="angebotObject()['angebot_sub_titel']"
+      ></span>
+      }
+    </div>
+  </div>
+  <!-- beschreibung -->
+  <div
+    class="px-site-padding-x pt-[1rem] 480:pt-[5rem] py-site-padding-x flex flex-col justify-center items-start gap-8"
+  >
+    @if(angebotObject()) {
+    <span
+      class="text-font-24 leading-line-24 text-grey-light-rgba-095 pt-8"
+      [innerHTML]="angebotObject()['angebot_kurzbeschreibung']"
+    ></span>
+    <span
+      class="text-font-24 leading-line-24 text-grey-light-rgba-08 italic"
+      [innerHTML]="angebotObject()['angebot_schlusswort_italic']"
+    ></span>
+    <!-- preis/button -->
+    <div class="w-full flex flex-col 720:flex-row justify-between pt-8 items-end 720:gap-0 gap-8">
+      <span class="text-font-24 leading-line-24 text-grey-light-rgba-095 720:w-auto w-full"
+        >Sitzung {{ angebotObject()['sitzungsdauer'] }} Min. -
+        {{ angebotObject()['preis_pro_sitzung'] }} CHF</span
+      >
+      <div class="flex 720:block w-full 720:w-auto justify-center items-center pt-8 720:pt-0">
+        <app-button [buttonText]="'Termin buchen'"></app-button>
+      </div>
+    </div>
+    }
+  </div>
+</app-section>
+<!-- kontakt -->
+<div class="pt-site-padding-y 480:pt-0"></div>
+<app-contact></app-contact>
+<!-- call to action -->
+ <app-call-to-action></app-call-to-action>
+ <app-footer></app-footer>

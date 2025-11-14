@@ -1,0 +1,18 @@
+<section>
+  @if (data()) {
+  <div class="relative w-full h-[20rem] 720:h-[25rem] 1275:h-[30rem]">
+    <img
+      class="w-full h-full object-cover object-center"
+      [src]="data()?.photo_gallery?.angebot_seite_herobild?.[0]?.[0]?.full_image_url"
+      alt=""
+    />
+    <div
+      class="absolute top-0 bottom-0 left-0 right-0 bg-[rgba(255,255,255,0.15)] flex justify-center items-end"
+    ></div>
+  </div>
+  }
+</section>
+<app-angebot></app-angebot>
+<app-contact></app-contact>
+<app-call-to-action></app-call-to-action>
+<app-footer></app-footer>

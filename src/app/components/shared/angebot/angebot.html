@@ -1,0 +1,21 @@
+<app-section>
+  <app-section-title titleText="Angebote"></app-section-title>
+  <div class="flex flex-col justify-center items-start gap-4 pt-4 970:grid 970:grid-cols-2 1800:grid-cols-3">
+    <!-- card -->
+    @for (angebot of angebote; track $index) {
+    <a
+      (click)="redirect(angebot.id, angebot.slug)"
+      class="flex flex-col p-4 480:p-8 border-1 970:h-full border-border-color rounded-[0.5rem] card-bg shadow-[0_2px_8px_#0001] card-hover cursor-pointer"
+    >
+      <app-section-sub-title class="pb-4" [titleText]="angebote[$index]['acf']['angebot_titel']"></app-section-sub-title>
+      <div class="w-full h-[15rem] overflow-hidden rounded-[0.5rem]">
+        <img class="w-full h-full object-cover" [src]="angebote[$index]['acf']['photo_gallery']['angebot_foto'][0][0]['full_image_url']" alt="" />
+      </div>
+      <span [innerHTML]="angebote[$index]['acf']['angebot_kurzbeschreibung'].replaceAll('\n', '<br>')" class="pt-4 text-grey-light-rgba-095">
+      </span>
+      <span [innerHTML]="angebote[$index]['acf']['angebot_schlusswort_italic'].replaceAll('\n', '<br>')" class="pt-4 text-grey-light-rgba-08 italic">
+      </span>
+    </a>
+    }
+  </div>
+</app-section>

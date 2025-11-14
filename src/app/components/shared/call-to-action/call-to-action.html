@@ -1,0 +1,33 @@
+<section class="w-full max-w-site-max-width mt-site-padding-y">
+  @if (wpData._callToActionData()) {
+  <!-- main div -->
+  <div class="w-full h-[26rem] 480:h-[30rem] relative">
+    <img
+      class="w-full h-full object-cover"
+      [src]="
+          wpData._callToActionData()?.photo_gallery?.call_to_action_bild?.[0]?.[0]?.full_image_url
+        "
+      alt=""
+    />
+
+    <!-- overlay -->
+    <div
+      class="text-[#344648] font-medium gap-12 480:gap-16 text-font-40 leading-line-40 flex flex-col justify-start items-start px-[2rem] 720:px-[4rem] py-[4rem] 720:py-[4rem] absolute top-0 left-0 right-0 bottom-0 bg-[rgba(255,255,255,0.09)]"
+    >
+      <span
+        [innerHTML]="
+          (wpData._callToActionData()?.call_to_action_intro || '').replaceAll('\n', '<br>')
+        "
+      ></span>
+
+      <span
+        [innerHTML]="
+          (wpData._callToActionData()?.call_to_action_schlusswort || '').replaceAll('\n', '<br>')
+        "
+      ></span>
+
+      <app-button [buttonText]="'Termin Buchen'"></app-button>
+    </div>
+  </div>
+  }
+</section>

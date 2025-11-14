@@ -1,0 +1,89 @@
+/* tailwind themes */
+@theme {
+  /* spacing */
+  --spacing-site-padding-x: 5rem;
+  --spacing-site-padding-y: 7rem;
+  --spacing-site-max-width: 1920px;
+  --spacing-section-title-padding: 5rem;
+
+  /* font-sizes */
+  --text-font-48: 3rem;
+  --leading-line-48: 3.3rem;
+  --text-font-40: 2.5rem;
+  --leading-line-40: 2.8rem;
+  --text-font-32: 2rem;
+  --leading-line-32: 2.3rem;
+  --text-font-24: 1.5rem;
+  --leading-line-24: 1.8rem;
+  --text-font-16: 1rem;
+  --leading-line-16: 1.3rem;
+
+  /* font family */
+  --font-lora: 'Lora', serif;
+
+  /* corner */
+  --radius-16: 1rem;
+
+  /* color */
+  --color-lachs: #fbe0c3;
+  --color-grey-light: #344648;
+  --color-grey-light-rgba-08: rgba(52, 70, 72, 0.8);
+  --color-grey-light-rgba-095: rgba(52, 70, 72, 0.99);
+  --color-border-color: rgba(0, 0, 0, 0.2);
+  --color-bg-light-dark: rgba(0, 0, 0, 0.01);
+
+  /* breakpoints */
+  --breakpoint-1800: 1800px;
+  --breakpoint-1275: 1275px;
+  --breakpoint-970: 970px;
+  --breakpoint-720: 720px;
+  --breakpoint-560: 560px;
+  --breakpoint-480: 480px;
+  --breakpoint-420: 420px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    /* spacing */
+    --spacing-site-padding-x: 3.5rem;
+  }
+}
+
+@media (max-width: 970px) {
+  :root {
+    /* spacing */
+    --spacing-site-padding-x: 3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    /* spacing */
+    --spacing-site-padding-x: 1.5rem;
+
+    /* font-sizes */
+    --text-font-40: 2rem;
+    --leading-line-40: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    /* spacing */
+    --spacing-site-padding-x: 1rem;
+    --spacing-site-padding-y: 3rem;
+    --spacing-section-title-padding: 2rem;
+
+    /* font-sizes */
+    --text-font-48: 1.8rem;
+    --leading-line-48: 2.1rem;
+    --text-font-40: 1.6rem;
+    --leading-line-40: 1.9rem;
+    --text-font-32: 1.5rem;
+    --leading-line-32: 1.8rem;
+    --text-font-24: 1rem;
+    --leading-line-24: 1.3rem;
+    --text-font-16: 1rem;
+    --leading-line-16: 1.3rem;
+  }
+}

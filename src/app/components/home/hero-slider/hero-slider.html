@@ -1,0 +1,24 @@
+<section class="relative">
+    <div class="slider-overlay absolute top-0 bottom-0 left-0 right-0 z-2 flex justify-center items-center p-4">
+        <h1 class="text-center text-font-48 leading-line-48 text-white">
+            Der Weg zu einem erfüllten Leben
+            <br>
+            beginnt bei dir.
+        </h1>
+    </div>
+  <swiper-container
+    slides-per-view="1"
+    speed="1500"
+    loop="true"
+    navigation="false"
+    autoplay='{"delay": 2000, "disableOnInteraction": false}'
+    allow-touch-move="false"
+    class="h-dvh"
+  >
+    @for (img of sliderImages; track $index) {
+    <swiper-slide>
+      <img [src]="img.full_image_url" alt="Hero Slide" class="object-cover w-full h-full" />
+    </swiper-slide>
+    }
+  </swiper-container>
+</section>
