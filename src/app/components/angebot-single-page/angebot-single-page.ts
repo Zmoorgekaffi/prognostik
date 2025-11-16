@@ -35,7 +35,6 @@ export class AngebotSinglePage implements AfterViewInit {
   subscribeAngebot() {
     this.wpData.getSingleAngebot(this.id).subscribe((data) => {
       this.angebotObject.set(data['acf']);
-      console.log(this.angebotObject());
     });
   }
 }

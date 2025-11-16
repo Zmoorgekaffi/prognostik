@@ -1,27 +1,24 @@
 import { Component, effect, inject } from '@angular/core';
-import { Section } from '../section/section';
 import { CommonModule } from '@angular/common';
-import { SectionTitle } from '../section-title/section-title';
-import { WpData } from '../../../services/wp-data';
+import { WpData } from '../../services/wp-data';
+import { Footer } from '../shared/footer/footer';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-contact',
-  imports: [Section, CommonModule, SectionTitle],
-  templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  selector: 'app-kontakt',
+  imports: [CommonModule, Footer],
+  templateUrl: './kontakt.html',
+  styleUrl: './kontakt.scss',
 })
-export class Contact {
+export class Kontakt {
+  wpData = inject(WpData);
   safeGoogleMapsUrl!: SafeResourceUrl;
   private sanitizer = inject(DomSanitizer);
-  wpData = inject(WpData);
 
   constructor() {
-
     effect(() => {
       const url = this.wpData._contactData()['googlemaps'];
       this.safeGoogleMapsUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     });
   }
-
 }

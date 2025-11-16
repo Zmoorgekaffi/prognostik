@@ -20,14 +20,11 @@
       <div
         class="grid grid-cols-2 w-full border-t-[1px] border-grey-light pb-4 pt-4 text-grey-light"
       >
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
-        <a href="#">über mich</a>
+        <a class="cursor-pointer" (click)="navigateToUrl('')">Home</a>
+        <a class="cursor-pointer" (click)="navigateToUrl('angebote')">Angebote</a>
+        <a class="cursor-pointer" href="#">über mich</a>
+        <a class="cursor-pointer" href="#">über mich</a>
+        <a class="cursor-pointer" (click)="navigateToUrl('kontakt')">Kontakt</a>
       </div>
     </div>
   </nav>

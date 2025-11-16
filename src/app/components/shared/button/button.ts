@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class Button {
   @Input() buttonText = 'Klick mich!'
+  @Input() link = '#'
+  router = inject(Router);
+
+  openLink() {
+    this.router.navigate([this.link]);
+  }
 }

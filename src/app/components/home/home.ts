@@ -6,10 +6,11 @@ import { Angebot } from '../shared/angebot/angebot';
 import { Testimonials } from '../shared/testimonials/testimonials';
 import { CallToAction } from '../shared/call-to-action/call-to-action';
 import { Footer } from '../shared/footer/footer';
+import { Contact } from '../shared/contact/contact';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroSlider, Intro, Angebot, Testimonials, CallToAction, Footer],
+  imports: [HeroSlider, Intro, Angebot, Testimonials, CallToAction, Footer, Contact],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

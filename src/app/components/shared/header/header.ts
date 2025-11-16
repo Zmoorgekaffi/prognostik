@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,7 @@ export class Header {
   //header
   show = true;
   private lastScrollY = 0;
+  router = inject(Router);
 
   constructor() {}
 
@@ -36,5 +38,10 @@ export class Header {
 
   toggleNav() {
     this.state = this.state === 'open' ? 'close' : 'open';
+  }
+
+  navigateToUrl(path:string) {
+    let url = `/${path}`;
+    this.router.navigate([url]);
   }
 }
