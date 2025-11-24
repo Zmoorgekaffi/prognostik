@@ -3,6 +3,7 @@ import { Home } from './components/home/home';
 import { AngebotSinglePage } from './components/angebot-single-page/angebot-single-page';
 import { Angebote } from './components/angebote/angebote';
 import { Kontakt } from './components/kontakt/kontakt';
+import { AboutMe } from './components/about-me/about-me';
 
 
 export const routes: Routes = [
@@ -10,5 +11,6 @@ export const routes: Routes = [
     { path: 'home', component: Home},
     { path: 'prognostik/:slug/:id', component: AngebotSinglePage },
     { path: 'angebote', component: Angebote },
-    { path: 'kontakt', component: Kontakt }
+    { path: 'kontakt', component: Kontakt },
+    { path: 'ueber-mich', component: AboutMe }
 ];

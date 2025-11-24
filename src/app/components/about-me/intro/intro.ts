@@ -1,17 +1,16 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SectionTitle } from '../../shared/section-title/section-title';
-import { Section } from '../../shared/section/section';
 import { SectionSubTitle } from '../../shared/section-sub-title/section-sub-title';
-import { WpData } from '../../../services/wp-data';
+import { Section } from '../../shared/section/section';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-intro',
   imports: [SectionTitle, Section, SectionSubTitle, CommonModule],
   templateUrl: './intro.html',
-  styleUrl: './intro.scss',
+  styleUrl: './intro.scss'
 })
 export class Intro {
-  wpData = inject(WpData);
-
+  @Input() data: any;
 }

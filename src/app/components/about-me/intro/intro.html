@@ -1,0 +1,31 @@
+@if (data?.photo_gallery?.intro_bild) {
+<app-section>
+  <div class="justify-center items-center flex pt-site-padding-y">
+    <app-section-title [titleText]="data['intro_titel']"></app-section-title>
+  </div>
+
+  <div class="flex gap-8 justify-center flex-col 1275:flex-row pt-2 items-center">
+    <div class="rounded-16 overflow-hidden shadow-[0_2px_5px_#0003] 420:min-h-[25rem] 420:min-w-[26.75rem] 420:max-h-[25rem] 420:max-w-[26.75rem]">
+      <img
+        class="object-cover w-full h-full"
+        [src]="data['photo_gallery']['intro_bild'][0][0]['full_image_url']"
+        alt=""
+      />
+    </div>
+
+    <div class="flex flex-col justify-start items-center 1275:items-start pt-4 grow text-center 1275:text-start">
+      <app-section-sub-title [titleText]="data['intro_sub-titel']"></app-section-sub-title>
+      <span
+        [innerHTML]="data['intro_text'].replaceAll('\n', '<br>')"
+        class="pt-4 480:pt-10 text-font-24 leading-line-24 text-grey-light-rgba-095"
+      >
+      </span>
+      <span
+        [innerHTML]="data['intro_schlusswort'].replaceAll('\n', '<br>')"
+        class="pt-2 480:pt-10 text-font-24 leading-line-24 italic font-normal text-grey-light-rgba-08"
+      >
+      </span>
+    </div>
+  </div>
+</app-section>
+}
